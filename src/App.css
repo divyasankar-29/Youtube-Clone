@@ -1,38 +1,87 @@
-.App {
-  text-align: center;
+.main_page {
+  display: flex ;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.sidebar {
+  flex: 0.2;
+  position: fixed;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.sidebar > hr {
+  height: 1px;
+  border: 0;
+  background-color: lightgray;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.videos {
+  flex: 0.8;
+  background-color: #f9f9f9;
+  padding: 40px 20px;
+  padding-bottom: 0;
+  margin-left: 190px;
+}
+
+.videos > h2 {
+  margin-left: 5px;
+  margin-bottom: 20px;
+}
+
+.videos_display {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+}
+
+.side_elements {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.side_elements:hover {
+  background-color : lightgray;
+  cursor : pointer
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.side_elements.selected {
+  background-color: lightgray;
 }
+
+.side_icons {
+  margin-left: 10px;
+  color : gray;
+  margin-top: 20px;
+  font-size: large;
+
+}
+.side_title {
+  margin-left: 10px;
+  margin-top: 20px;
+  font-size: 12px;
+  font-weight: 500;
+
+}
+
+.video-player {
+  flex: 0.8;
+  background-color: #f9f9f9;
+  padding: 40px 20px;
+  padding-bottom: 0;
+}
+
+.player {
+  display: flex;
+  flex-direction: row;
+  margin-left: 190px;
+}
+
+.search_videos {
+  padding-left: 20px;
+}
+
+.search_videos_display {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  padding-left: 150px;
+}
+
